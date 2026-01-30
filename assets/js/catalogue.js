@@ -3,6 +3,7 @@
  * @param {string} categorie - La catégorie à afficher ('tout', 'thermique', 'electrique', 'accessoire')
  */
 function filtrer(categorie) {
+    console.log("Filtre activé :", categorie);
     // 1. On sélectionne tous les articles produits
     const produits = document.querySelectorAll('.carte-produit');
 

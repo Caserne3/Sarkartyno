@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,11 +19,15 @@ session_start();
         <nav>
             <div class="logo">🏁 Sarkartyno</div>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="catalogue.php">Catalogue</a></li>
-                <li><a href="configurateur.php">Configurateur</a></li>
-                <li><a href="login.php">Connexion</a></li>
-                <li><a href="panier.php">Panier</a></li>
+                <li><a href="/Sarkartyno/index.php">Accueil</a></li>
+                <li><a href="/Sarkartyno/catalogue.php">Catalogue</a></li>
+                <li><a href="/Sarkartyno/configurateur.php">Configurateur</a></li>
+                <?php if (isset($_SESSION['user'])): ?>
+                    <li><a href="/Sarkartyno/profil.php" style="color: #e74c3c; font-weight: bold;">Mon Profil (<?php echo htmlspecialchars($_SESSION['user']['prenom']); ?>)</a></li>
+                <?php else: ?>
+                    <li><a href="/Sarkartyno/login.php">Espace Membre</a></li>
+                <?php endif; ?>
+                <li><a href="/Sarkartyno/panier.php">Panier</a></li>
             </ul>
         </nav>
     </header>

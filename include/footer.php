@@ -1,7 +1,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Karting E-Sport - Projet BTS SIO</p>
+        <p>&copy; 2026 - Sarkartyno - Projet BTS SIO</p>
         <ul>
             <li><a href="mentions.php">Mentions Légales</a></li>
             <li><a href="contact.php">Contact / SAV</a></li>

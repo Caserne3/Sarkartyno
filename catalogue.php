@@ -47,7 +47,7 @@ $produits = appelFirebase('produits');
     </div>
 </section>
 
-<script src="assets/js/catalogue.js"></script>
+<script src="/Sarkartyno/assets/js/catalogue.js"></script>
 
 <?php
 include 'include/footer.php';
